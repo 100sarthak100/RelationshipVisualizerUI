@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Relationship Visualizer App | UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p float="center" align="middle">
+  <img src="src/assets/gif/main.gif" width="100%" />
+</p>
 
-## Available Scripts
+<p float="center" align="middle">
+  <img src="src/assets/images/main_1.PNG" width="100%" />
+</p>
 
-In the project directory, you can run:
+<p float="center" align="middle">
+  <img src="src/assets/images/main_2.PNG" width="100%" />
+</p>
 
-### `npm start`
+<p float="center" align="middle">
+  <img src="src/assets/images/main_3.PNG" width="100%" />
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Description
+- The App uses Depth First Search (DFS) to traverse the Users graph, and find the path between the 2 selected nodes. Each node is a User which contains all the user data like User ID, Name, Relation Type between the users etc. The top 5 paths along with the Degree of Seperation is displayed on the UI.
+- The App is developed using the MERN stack, and uses Heroku to deploy the server and Netlify fo the application UI.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Run Locally
 
-### `npm test`
+- Clone the repo in your machine.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+// UI
+mkdir client
+cd client
+git clone https://github.com/100sarthak100/RelationshipVisualizerUI
+npm install
 
-### `npm run build`
+// Server
+mkdir server
+cd server
+git clone https://github.com/100sarthak100/RelationshipVisualizer
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Make a `.env` file in the server directory and copy your MongodB connection URI there along with the port number.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Change the baseUrl in the client/src/api/index.js file to the local url.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Then run the application
+```
+// client
+npm start
 
-### `npm run eject`
+// server
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- The server and the clinet can be accesed from here
+```
+Client -> http://localhost:3000/
+Server -> http://localhost:5000/
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Scope for Improvement
+### DFS | Time Complexity O(V + E)
+- The Application uses DFS graph traversal algorithm to traverse the User graph and return all the paths between 2 users.
+- The time complexity of DFS is O(V + E) where V is the number of users and E is the number of relation between them.
+- As the number of users and the relations increases the algorithm will take more time to return the result.
+- We can build a Graph Database on AWS Using Amazon DynamoDB and Titan, to scale our application for >=1M users. [Amazon AWS](https://aws.amazon.com/blogs/big-data/building-a-graph-database-on-aws-using-amazon-dynamodb-and-titan/) 
+- The application can later be optimized for mobile devices also.
