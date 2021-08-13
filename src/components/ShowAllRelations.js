@@ -42,7 +42,7 @@ const ShowAllRelations = () => {
                                         <span>{relation.userName2}</span>
                                     </Box>
                                     <Box p="4" w="70px" h="5" bg="white">
-                                        <Button colorScheme="red" size="xs" onClick={() => dispatch(deleteRelation(relation._id))}>
+                                        <Button disabled colorScheme="red" size="xs" onClick={() => dispatch(deleteRelation(relation._id))}>
                                             <DeleteIcon />
                                         </Button>
                                     </Box>

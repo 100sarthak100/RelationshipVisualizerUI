@@ -42,7 +42,7 @@ function ShowUser() {
                                         </Text>
                                     </Box>
                                     <Box p="4" w="70px" h="5" bg="white">
-                                        <Button colorScheme="red" size="xs" onClick={() => dispatch(deleteUser(user._id))}>
+                                        <Button disabled colorScheme="red" size="xs" onClick={() => dispatch(deleteUser(user._id))}>
                                             <DeleteIcon />
                                         </Button>
                                     </Box>
