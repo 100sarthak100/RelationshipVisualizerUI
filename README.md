@@ -17,8 +17,10 @@
 </p>
 
 ## Project Description | [Live Demo](https://relationshipvisualizer.netlify.app/) 
-- The App uses Depth First Search (DFS) to traverse the Users graph, and find the path between the 2 selected nodes. Each node is a User which contains all the user data like User ID, Name, Relation Type between the users etc. The top 5 paths along with the Degree of Seperation is displayed on the UI.
-- The App is developed using the MERN stack, and uses Heroku to deploy the server and Netlify fo the application UI.
+- This is a MERN stack CRUD application. The App uses Depth First Search (DFS) to traverse the User's graph and find the degree of separation along with the exact path between the   2 selected nodes. Each node is a User which contains all the user data like User ID, Name, Relation Type between the users, etc. Users and Relations can be added or deleted.
+- The top 5 paths along with the Degree of Separation are displayed on the UI.
+- The App is developed using the MERN stack, React & Chakra UI for the frontend along with Redux for state management. Node and Express for Backend and MongoDB for the database.
+- Used Heroku to deploy the server and Netlify for the application UI.
 
 ## Backend Code
 ```
