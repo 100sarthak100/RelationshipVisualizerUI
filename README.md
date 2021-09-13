@@ -20,6 +20,11 @@
 - The App uses Depth First Search (DFS) to traverse the Users graph, and find the path between the 2 selected nodes. Each node is a User which contains all the user data like User ID, Name, Relation Type between the users etc. The top 5 paths along with the Degree of Seperation is displayed on the UI.
 - The App is developed using the MERN stack, and uses Heroku to deploy the server and Netlify fo the application UI.
 
+## Backend Code
+```
+https://github.com/100sarthak100/RelationshipVisualizer
+```
+
 ## Run Locally
 
 - Clone the repo in your machine.
